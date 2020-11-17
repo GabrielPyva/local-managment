@@ -1,5 +1,6 @@
 from output_layer import print_form, println
 from input_layer import get_name, get_password
+from getpass import getpass
 
 
 def make_form(menu):
@@ -20,8 +21,7 @@ def fname():
 
 
 def fpassword():
-    print_form('password')
-    get_password()
+    getpass('\tPassword: ')
 
 
 def isform(menu):

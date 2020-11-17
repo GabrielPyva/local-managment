@@ -7,8 +7,13 @@ def program_looper():
     while True:
         display_menu(current_menu)
         option = get_option()
+        if option == 0:
+            if current_menu == [0]:
+                break
+            else:
+                current_menu = navigate(option, current_menu)
+                continue
         make_form(current_menu)
-        if option == current_menu[-1] == 0: break
         current_menu = navigate(option, current_menu)
         manage(option, current_menu)
 
