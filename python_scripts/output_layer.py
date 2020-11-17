@@ -1,6 +1,5 @@
 from os import get_terminal_size, system
 
-current_window_width = get_terminal_size()[0]
 
 def display_menu(menu=[0]):
     clear_screen()
@@ -9,12 +8,11 @@ def display_menu(menu=[0]):
     if menu == [0, 1]:
         print_menu('Log in', ['Continue with the Log In', 'Back'])
     if menu == [0, 2]:
-        print_title('Please input your data')
-        print_options(['No options yet'])
-        print_input_area()
+        print_menu('Do you wish to continue?', ['Continue', 'Back'])
 
 
 def print_title(title=''):
+    current_window_width = get_terminal_size()[0]
     print(title.upper().center(len(title)+2).center(current_window_width, '='), end='\n\n')
 
 
@@ -40,6 +38,7 @@ def print_form(data):
 
 
 def println(char: str):
+    current_window_width = get_terminal_size()[0]
     print(f'\n\t{char * (current_window_width//len(char)-16)}\n')
 
 

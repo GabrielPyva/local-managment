@@ -2,7 +2,10 @@ from getpass import getpass
 
 
 def get_option():
-    option = int(input())
+    try:
+        option = int(input())
+    except:
+        option = -1
     return option
 
 
@@ -12,5 +15,5 @@ def get_name():
 
 
 def get_password():
-    password = getpass(prompt='')
+    password = input()
     return password

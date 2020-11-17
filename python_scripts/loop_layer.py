@@ -13,6 +13,7 @@ def program_looper():
             else:
                 current_menu = navigate(option, current_menu)
                 continue
+        if option == -1: continue
         make_form(current_menu)
         current_menu = navigate(option, current_menu)
         manage(option, current_menu)
