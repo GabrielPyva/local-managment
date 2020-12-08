@@ -4,7 +4,7 @@ from getpass import getpass
 
 
 def make_form(menu):
-    if isform(menu):    
+    if isform(menu):
         if menu == [0, 1]:
             sign_in()
         if menu == [0, 2]:
